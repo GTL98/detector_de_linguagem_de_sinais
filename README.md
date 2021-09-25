@@ -30,8 +30,11 @@ Para essa etapa, serão usadas as seguintes bibliotecas:
     
     - OpenCV;
     
-    -Mediapipe;
+    - Mediapipe;
     
     - Sklearn e;
     
     - Matplotlib.
+    
+Caso não possua alguma biblioteca, basta instalar pelo **Conda** ou pelo **pip** dentro da linha
+da célula de código do Jupyter (usando **!pip install**).
