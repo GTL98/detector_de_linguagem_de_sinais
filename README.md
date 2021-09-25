@@ -24,4 +24,14 @@
 O **detector** será feito em 11 etapas.
 
 ### Etapa 1: Importar e Instalar as Dependências
-Para essa etapa
+Para essa etapa, serão usadas as seguintes bibliotecas:
+
+    - Tensorflow;
+    
+    - OpenCV;
+    
+    -Mediapipe;
+    
+    - Sklearn e;
+    
+    - Matplotlib.
