@@ -1,4 +1,7 @@
 # Rede Neural para detectar linguagem de sinais (achar um nome depois)
+
+**Usar o Jupyter Notebook para esse projeto**
+
  ### Objetivo: Detectar em tempo real a linguagem de sinais.
   
     1 - Usar pontos-chaves MP (mediapipe) holísticos para a rede neural ser
@@ -21,3 +24,4 @@
 O **detector** será feito em 11 etapas.
 
 ### Etapa 1: Importar e Instalar as Dependências
+Para essa etapa
