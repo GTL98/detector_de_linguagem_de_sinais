@@ -62,4 +62,7 @@ para que a câmera continue aberta, leia o que está captando e mostre na tela e
 método **read()** do OpenCV, ele retorna 2 valores que podemos armazenar. Um deles é armazenado na variável *frame*.
 Como um vídeo nada mais é do que vários frames seguidos, essa variável de mesmo nome armazena o frame capturado e
 mostra na tela e como este pedaço do código está em um loop, vários frames são exibidos em sequência, formando um
-vídeo ao final.
+vídeo ao final. Para encerrar esse loop, basta apertar a tecla **S**.
+
+O segundo passo é criar o código do Mediapipe holístico e criar duas variáveis: um para o Mediapipe holístico e 
+a outra para o Mediapipe desenho holístico.
