@@ -1,4 +1,4 @@
-# Rede Neural para detectar linguagem de sinais
+# Rede Neural para detectar linguagem de sinais (achar um nome depois)
  **Objetivo**: Detectar em tempo real a linguagem de sinais.
   
     1 - Usar pontos-chaves MP (mediapipe) holísticos para a rede neural ser
@@ -16,3 +16,8 @@
     2 - Treinar uma rede neural com LSTM com camadas e;
     
     3 - Retornar em tempo real a detecção dos sinais com OpenCV.
+
+
+O **detector** será feito em 11 etapas.
+
+### Etapa 1: Importar e Instalar as Dependências
