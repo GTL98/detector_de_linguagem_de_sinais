@@ -1,6 +1,6 @@
 # Rede Neural para detectar linguagem de sinais (achar um nome depois)
 
-**Usar o Jupyter Notebook para esse projeto**
+***Usar o Jupyter Notebook para esse projeto***
 
  ### Objetivo: Detectar em tempo real a linguagem de sinais.
   
