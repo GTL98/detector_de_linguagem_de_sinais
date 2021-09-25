@@ -72,4 +72,7 @@ A primeira etapa dentro dessa função é converter a imagem recebida de BGR (**
 a imagem, tornaremos gravável novamente e finalmente converteremos de RGB para BGR. O OpenCV por padrão captura as imagens
 no formato BGR, mas o Mediapipe aceita somente RGB; por isso essa conversão. Esse vai e volta deve ser feito para que o modelo
 do Mediapipe trabalhe com a imagem no formato RGB e quando voltar à tela, seja no formato do OpenCV (em BGR). Ao fim, retornaremos
-a imagem e o resultado do modelo.
+a imagem e o resultado do modelo. Com tudo certo na função, podemos adicioná-la ao código que abre a câmera, dentro do laço **while**.
+Mas antes disso, devemos instânciar todo esse laço em uma declaração **with** para acessarmos o nosso modelo holístico. É passado 2 parâmetros
+para o modelo: *min_detection_confidence* e *min_tracking_confidence*. O primeiro parâmetro serve para a detecção inicial e o segundo, para
+que o MP holístico ratreie os pontos-chaves detectados com o primeiro parâmetro. Ambos com o valor de 0,5.
