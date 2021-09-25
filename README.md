@@ -65,4 +65,11 @@ mostra na tela e como este pedaço do código está em um loop, vários frames s
 vídeo ao final. Para encerrar esse loop, basta apertar a tecla **S**.
 
 O segundo passo é criar o código do Mediapipe holístico e criar duas variáveis: um para o Mediapipe holístico e 
-a outra para o Mediapipe desenho holístico.
+a outra para o Mediapipe desenho. A primeira variável serve para fazer as detecções e a segunda, para desenhar essas
+detecções. Para facilitar nossas vidas, será criada uma função que recebe dois parâmetros: *imagem* e *modelo*.
+A primeira etapa dentro dessa função é converter a imagem recebida de BGR (**B**lue, **G**reen, **R**ed) para RGB
+(**R**ed, **G**reen, **B**lue). Em seguida, definiremos para não gravar essas imagens (isso economiza memória), detectamos
+a imagem, tornaremos gravável novamente e finalmente converteremos de RGB para BGR. O OpenCV por padrão captura as imagens
+no formato BGR, mas o Mediapipe aceita somente RGB; por isso essa conversão. Esse vai e volta deve ser feito para que o modelo
+do Mediapipe trabalhe com a imagem no formato RGB e quando voltar à tela, seja no formato do OpenCV (em BGR). Ao fim, retornaremos
+a imagem e o resultado do modelo.
