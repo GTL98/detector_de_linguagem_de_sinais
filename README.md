@@ -9,7 +9,7 @@
     3 - Realizar predições em tempo real.
   
 
-### Como vai funcionar**:
+### Como vai funcionar:
 
     1 - Coletar os pontos-chaves MP holísticos;
     
