@@ -40,3 +40,12 @@ A única biblioteca a ser instalada foi a Tensorflow via **pip** pelo prompt de 
 O Tensorflow será usado para rede neural, o OpenCv para trabalhar com a câmera do computador, o Mediapipe para extrair os
 pontos-chaves holísticos, o Scikit-Learn para as métricas de avaliação, bem como para ser usado nos treinos e testes e o
 Matplotlib para vizualisar as imagens de uma maneira mais fácil.
+
+As bibliotecas importadas foram:
+
+    - cv2 (OpenCV);
+    - numpy;
+    - os;
+    - matplotlib;
+    - time e;
+    - mediapipe.
