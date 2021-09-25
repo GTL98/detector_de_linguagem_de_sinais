@@ -32,9 +32,11 @@ Para essa etapa, serão usadas as seguintes bibliotecas:
     
     - Mediapipe;
     
-    - Sklearn e;
+    - Scikit-Learn e;
     
     - Matplotlib.
     
-Caso não possua alguma biblioteca, basta instalar pelo **Conda** ou pelo **pip** dentro da linha
-da célula de código do Jupyter (usando **!pip install**).
+A única biblioteca a ser instalada foi a Tensorflow via **pip** pelo prompt de comando do Anaconda.
+O Tensorflow será usado para rede neural, o OpenCv para trabalhar com a câmera do computador, o Mediapipe para extrair os
+pontos-chaves holísticos, o Scikit-Learn para as métricas de avaliação, bem como para ser usado nos treinos e testes e o
+Matplotlib para vizualisar as imagens de uma maneira mais fácil.
