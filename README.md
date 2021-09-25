@@ -1,5 +1,5 @@
 # Rede Neural para detectar linguagem de sinais (achar um nome depois)
- ## Objetivo: Detectar em tempo real a linguagem de sinais.
+ ### Objetivo: Detectar em tempo real a linguagem de sinais.
   
     1 - Usar pontos-chaves MP (mediapipe) holísticos para a rede neural ser
     capaz de reconhecer as mãos e o rosto;
@@ -9,7 +9,7 @@
     3 - Realizar predições em tempo real.
   
 
-## Como vai funcionar**:
+### Como vai funcionar**:
 
     1 - Coletar os pontos-chaves MP holísticos;
     
