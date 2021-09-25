@@ -1,6 +1,8 @@
 # Rede Neural para detectar linguagem de sinais (achar um nome depois)
 
-***Usar o Jupyter Notebook para esse projeto***
+***Usar o Jupyter Notebook para esse projeto.***
+
+***Todo o código estará no repositório.***
 
  ### Objetivo: Detectar em tempo real a linguagem de sinais.
   
@@ -49,3 +51,15 @@ As bibliotecas importadas foram:
     - matplotlib;
     - time e;
     - mediapipe.
+
+### Etapa 2: Pontos-chaves usando o MP Holístico
+
+Nessa etapa, vamos acessar a câmera do computador com o OpenCV e detectar o que está na frente dela com o Mediapipe.
+
+O primeiro passo aqui é usar o OpenCV para acessar a câmera ver como ela está se comportando. Informando o valor 0 para
+cv2.VideoCapture(), está dizendo ao OpenCV para usar a câmera do computador. Depois disso, abriremos um loop **while**
+para que a câmera continue aberta, leia o que está captando e mostre na tela em tempo real. Quando estamos usando o
+método **read()** do OpenCV, ele retorna 2 valores que podemos armazenar. Um deles é armazenado na variável *frame*.
+Como um vídeo nada mais é do que vários frames seguidos, essa variável de mesmo nome armazena o frame capturado e
+mostra na tela e como este pedaço do código está em um loop, vários frames são exibidos em sequência, formando um
+vídeo ao final.
