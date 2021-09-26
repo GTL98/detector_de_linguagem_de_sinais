@@ -25,7 +25,7 @@
 
 O **detector** será feito em 11 etapas.
 
-### Etapa 1: Importar e Instalar as Dependências
+### Etapa 1: Importar as Dependências
 Para essa etapa, serão usadas as seguintes bibliotecas:
 
     - Tensorflow;
