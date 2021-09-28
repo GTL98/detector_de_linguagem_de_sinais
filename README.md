@@ -66,3 +66,5 @@ Com isso, terminamos a etapa 2.
 ### Etapa 3: Extrair os Valores de Pontos-chaves
 
 Começaremos essa etapa colocando os valores de *resultados* em um array NumPy. O que nos é retornado quando chamamos *resultados* é uma lista com os valores das posições das landmarks. Passar isso para um array NumPy facilitará muito para mexermos com esses dados. Para isso, usaremos um laço **for** para percorrer a lista de landmarks. Há quatro valores a serem colocados no array: **X**, **Y**, **Z** e **Visibility**. Feito isso, vamos adicionar esse array em uma lista. Mas, para facilitar a nossa vida, faremos tuso isso em uma *list comprehension*. Quando a lista é feita pela *list comprehension*, o Python gera uma lista para cada conjunto dos quatro valores, mas para a LSTM é ruim esse formato, portanto, deveremos passar ao final da *list comprehension* a função **flatten()** para que o Python junte tudo em um array só.
+
+Quando a câmera não capta algum membro, é retornado um erro quando chamamos as landmarks do mesmo. Se for feita uma lista para pegar esses dados, o Python mostra um erro dizendo que é impossível pegar esses dados, uma vez que eles não existem.
