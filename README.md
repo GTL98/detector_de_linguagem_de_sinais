@@ -81,4 +81,4 @@ Com isso, concluímos a etapa 4.
 
 ### Etapa 5: Coletar os Valores de Pontos-chaves para Treino e Teste
 
-
+Começamos essa etapa copiando o código do loop **while** da Etapa 2, onde faremos algumas modificações. Ao invés de deixarmos a câmera ligada o tempo todo, ela tirará algumas fotos de tempos em tempos pelas ações descritas no array da etapa anterior. Ou seja, a câmera não ficará aberta o tempo todo, mas somente nos momentos para pegar as informações. É muito importante colocar uma pausa entre uma ação e outra para que seja possível se ajeitar para fazer as outras ações. O que estamos fazendo aqui é quando for o frame 0 da captura, um texto aparecerá na tela para informar o que será feito e teremos 2 segundos para nos ajeitar e fazer a ação.
