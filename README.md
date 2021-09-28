@@ -71,5 +71,4 @@ Quando a câmera não capta algum membro, é retornado um erro quando chamamos a
 
 A etapa 3 está concluída.
 
-### Etapa 4: Configurar as Pastas para a Coleção
-
+### Etapa 4: Configurar as Pastas para a Coleção de Arrays
