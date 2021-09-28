@@ -72,3 +72,5 @@ Quando a câmera não capta algum membro, é retornado um erro quando chamamos a
 A etapa 3 está concluída.
 
 ### Etapa 4: Configurar as Pastas para a Coleção de Arrays
+
+Nessa quarta etapa, vamos criar as pastas para guardar as nossas coleções de arrays feitas na Etapa 3. Começamos criando uma variável para armazenar o caminho da pasta que guardaremos os arrays. A segunda variável é um array NumPy com as ações que queremos que sejam detectadas, são somente três (olá, obrigado e amo você), mas podem ser mais ações. Passaremos para a IA capturar 30 vídeos contendo os dados. E por fim, fixaremos a quantidade de frames necessários para a IA saber o que estamos querendo dizer com os sinais, o valor é de 30 frames. A quantidade de dados coletadas é o número da quantidade de vídeos, mais a quantidade de frames, mais a quantidade de ações, mais a quantidade de dados no array. Isso dá um total de 4.487.400 dados!!!
