@@ -34,9 +34,11 @@ Para essa etapa, serão usadas as seguintes bibliotecas:
     
     - Mediapipe;
     
-    - Scikit-Learn e;
+    - Scikit-Learn;
     
-    - Matplotlib.
+    - Matplotlib e;
+    
+    - Keras.
     
 A única biblioteca a ser instalada foi a Tensorflow via **pip** pelo prompt de comando do Anaconda. O Tensorflow será usado para rede neural, o OpenCv para trabalhar com a câmera do computador, o Mediapipe para extrair os pontos-chaves holísticos, o Scikit-Learn para as métricas de avaliação, bem como para ser usado nos treinos e testes e o Matplotlib para vizualisar as imagens de uma maneira mais fácil.
 
@@ -88,3 +90,9 @@ O próximo passo é salvar o array em um arquivo, cada arquivo representando o a
 A parte final desta etapa é a mais "chatinha" de ser feita, precisamos agora salvar os arrays. Para isso, se ajeite na cadeira e começe a fazer os sinais na frente de câmera. Se ficar muito demorado para fazer, diminua o tempo de espera em **cv2.waitKey()**. Com as capturas feitas, fechamos a Etapa 5.
 
 ### Etapa 6: Processar os Dados e Criar Rótulos e Recursos
+
+Vamos importar a biblioteca de treino do Scikit-Learn para criar uma partição de teste e outra de treino. Além da Scikit-Learn, vamos importar a bilbioteca Keras. Ambas nos ajudarão com a parte de rótulos. O método **train_test_split()** do Scikit-Learn separará os dados em dados de treino e dados de teste, é possível fazer essa separação na mão, mas podemos acabar fazendo algo errado e prejudicar a IA. O método **to_categorical()** do Keras serve para codificar os dados para o *onehot-encoding*, isso é de suma importência para que a IA entenda os dados. Feito isso, vamos criar um dicionário com os nossos rótulos.
+
+Com o dicionário criado, vamos pegar todos os dados gerados e estruturá-los. Para isso, vamos criar um mega array com todos os dados coletados dos pontos-chaves. No nosso caso, o mega array possui um *shape* de 90, 30, 1662, ou seja, 90 vídeos (pois são 30 vídeos por ação), 30 frames por video e 1662 pontos-chaves capturados. O número de vídeos aumenta ou diminui dependendo de quantos sinais você quer que a IA aprenda. Agora, vamos pré-processar os dados para que possamos trabalhar com eles.
+
+Começamos armazenando o mega array na variável **X** e os rótulos na variável **y**. O método **to_cateorial()** será usado na variável **y**. É criada uma lista com valores 0 e 1, e dessa forma a IA sabe qual ação que conforme a sequência de 0 e 1. Isso é o *one-hot enconding*.
