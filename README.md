@@ -61,7 +61,7 @@ O próximo passo é criar a função que vai desenhar as *landmarks*. As landmar
 
 Agora, usaremos o Matplotlib para vizualisar o último frame captado pelo loop. Com isso, poderemos ver como as landmarks se comportam. Como o OpenCV grava o frame em BGR, é necessário converter para RGB para deixar a visualização melhor. Mas antes disso, é necessário chamar a função **desenhar_landmarks()** passando o *frame* e *resultados* como parâmetros. As imgens geradas pelo Matplotlib ficam confusas com as marcações, mas podemos ter uma noção de como funciona o Mediapipe. Feito isso, vamos colocar tudo isso no loop **while**. Em **cv2.imshow()**, é preciso trocar o parâmetro *frame* por *imagem*. Se deixar com *frame*, será mostrado o vídeo na tela sem as landmarks, com o parâmetro *image* as landmarks aparecem em tempo real; uma vez que esse parâmetro foi tratado para ter as landmarks, o *frame* por sua vez não.
 
-Com isso, terminamos a etapa 2.
+Com isso, terminamos a Etapa 2.
 
 ### Etapa 3: Extrair os Valores de Pontos-chaves
 
@@ -69,7 +69,7 @@ Começaremos essa etapa colocando os valores de *resultados* em um array NumPy. 
 
 Quando a câmera não capta algum membro, é retornado um erro quando chamamos as landmarks do mesmo. Se for feita uma lista para pegar esses dados, o Python mostra um erro dizendo que é impossível pegar esses dados, uma vez que eles não existem. Como a rede neural não pode receber erros, teremos te criar um array com zeros quando isso acontecer. Para isso, basta usar condição **if-else**. Se existir valores de landmarks, adicionar ao array esses valores, caso não, adicionar zeros com o **np.zeros**. Como o *pose_landmarks* é o único que possui **visibility** como dado, não podemos deixar de colocá-lo. Mas como saber o tamanho do array para completar com zeros? Basta chamar o método *len* na landmark desejada e multiplicar pelo número de itens dentro dela. Todos serão multiplicados por 3, menos o *pose_landmarks* que possui 4 valores. E para facilitar a nossa vida, vamos colocar tudo isso dentreo de uma função. Ao final da função, devemos retornar um array com todos os arrays em um só, para isso usaremos o método **concatenate()** do NumPy.
 
-A etapa 3 está concluída.
+A Etapa 3 está concluída.
 
 ### Etapa 4: Configurar as Pastas para a Coleção de Arrays
 
@@ -77,7 +77,7 @@ Nessa quarta etapa, vamos criar as pastas para guardar as nossas coleções de a
 
 O próximo passo é criar as pastas que vamos armazenar os dados. Para isso, vamos usar um loop **for** em nosso array de ações. Para cada ação dentro desse array, será criada uma pasta para guardar os dados de somente desta ação. Ao final desse loop, teremos as pastas presentes no array das ações, e dentro dessas pastas, subpastas com cada sequência da ação (o número de subpastas é determinado pela variável *num_videos*). Vale lembrar que deve utilizar um bloco **try** para evitar que o Python crie as pastas e subpastas se já existirem.
 
-Com isso, concluímos a etapa 4.
+Com isso, concluímos a Etapa 4.
 
 ### Etapa 5: Coletar os Valores de Pontos-chaves para Treino e Teste
 
@@ -85,4 +85,6 @@ Começamos essa etapa copiando o código do loop **while** da Etapa 2, onde fare
 
 O próximo passo é salvar o array em um arquivo, cada arquivo representando o array do determinado frame. Para isso vamos usar o método **save()** do NumPy. A extensão do arquivo é *.npy*. O que estará salvo nesses documentos é o array dos pontos-chaves de cada captura feita. Vale ressaltar que os parâmetros passados para o método **save()** são o caminho do arquivo e os dados, no caso os pontos-chaves.
 
-A parte final desta etapa é a mais "chatinha" de ser feita, precisamos agora salvar os arrays. Para isso, se ajeite na cadeira e começe a fazer os sinais na frente de câmera. Se ficar muito demorado para fazer, diminua o tempo de espera em **cv2.waitKey()**.
+A parte final desta etapa é a mais "chatinha" de ser feita, precisamos agora salvar os arrays. Para isso, se ajeite na cadeira e começe a fazer os sinais na frente de câmera. Se ficar muito demorado para fazer, diminua o tempo de espera em **cv2.waitKey()**. Com as capturas feitas, fechamos a Etapa 5.
+
+### Etapa 6: Processar os Dados e Criar Rótulos e Recursos
