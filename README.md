@@ -113,4 +113,4 @@ Vamos agora compilar o modelo e treiná-lo. Chamamos o método **fit()** e passa
 
 ### Etapa 8: Fazer Predições
 
-
+Para fazer uma predição manual e conferir se a IA aprendeu, basta chamar o módulo **predicit()** e informar como parâmetro a variável **X_teste**.
