@@ -82,3 +82,7 @@ Com isso, concluímos a etapa 4.
 ### Etapa 5: Coletar os Valores de Pontos-chaves para Treino e Teste
 
 Começamos essa etapa copiando o código do loop **while** da Etapa 2, onde faremos algumas modificações. Ao invés de deixarmos a câmera ligada o tempo todo, ela tirará algumas fotos de tempos em tempos pelas ações descritas no array da etapa anterior. Ou seja, a câmera não ficará aberta o tempo todo, mas somente nos momentos para pegar as informações. É muito importante colocar uma pausa entre uma ação e outra para que seja possível se ajeitar para fazer as outras ações. O que estamos fazendo aqui é quando for o frame 0 da captura, um texto aparecerá na tela para informar o que será feito e teremos 2 segundos para nos ajeitar e fazer a ação.
+
+O próximo passo é salvar o array em um arquivo, cada arquivo representando o array do determinado frame. Para isso vamos usar o método **save()** do NumPy. A extensão do arquivo é *.npy*. O que estará salvo nesses documentos é o array dos pontos-chaves de cada captura feita. Vale ressaltar que os parâmetros passados para o método **save()** são o caminho do arquivo e os dados, no caso os pontos-chaves.
+
+A parte final desta etapa é a mais "chatinha" de ser feita, precisamos agora salvar os arrays. Para isso, se ajeite na cadeira e começe a fazer os sinais na frente de câmera. Se ficar muito demorado para fazer, diminua o tempo de espera em **cv2.waitKey()**.
