@@ -96,3 +96,11 @@ Vamos importar a biblioteca de treino do Scikit-Learn para criar uma partição 
 Com o dicionário criado, vamos pegar todos os dados gerados e estruturá-los. Para isso, vamos criar um mega array com todos os dados coletados dos pontos-chaves. No nosso caso, o mega array possui um *shape* de 90, 30, 1662, ou seja, 90 vídeos (pois são 30 vídeos por ação), 30 frames por video e 1662 pontos-chaves capturados. O número de vídeos aumenta ou diminui dependendo de quantos sinais você quer que a IA aprenda. Agora, vamos pré-processar os dados para que possamos trabalhar com eles.
 
 Começamos armazenando o mega array na variável **X** e os rótulos na variável **y**. O método **to_cateorial()** será usado na variável **y**. É criada uma lista com valores 0 e 1, e dessa forma a IA sabe qual ação que conforme a sequência de 0 e 1. Isso é o *one-hot enconding*. Como mencionado anteriormente, usaremos o médoto **train_test_split()** para separar os dados de teste e treino. É necessário passar os arrays (**X** e **y**) e o tamanho dos dados de teste (**test_size**). Para o tamnho de teste, foi usado o valod e 0.05, isto é: 5% dos dados são destinádos ao conjunto de teste e os outros 95%, aos dados de treino.
+
+E por incrível que pareça, é somente isso na Etapa 6.
+
+### Etapa 7: Construir e Treinar a Rede Neural LSTM
+
+Nessa etapa vamos construir e treinar a nossa IA e para isso vamos usar o Keras. Importaremos 4 módulos: **Sequential**, **LSTM**, **Dense** e **TensorBoard**. O primeiro módulo serve para criar o sistema de rede neural sequencial. O LSTM serve para contruir a nossa rede neural e detectar as ações que fazemos e junto com o LSTM, o módulo Dense é mais uma camada a ser colocada na rede neural. Por fim, o TensorBoard serve para fazer o registro para monitorar e rastrear o nosso modelo ao longo do treinamento. O passo seguinte é criar um diretório para armazenar esses registros.
+
+Com tudo feito, vamos finalmente criar a nossa rede neural!
