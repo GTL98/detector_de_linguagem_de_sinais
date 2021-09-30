@@ -104,3 +104,9 @@ E por incrível que pareça, é somente isso na Etapa 6.
 Nessa etapa vamos construir e treinar a nossa IA e para isso vamos usar o Keras. Importaremos 4 módulos: **Sequential**, **LSTM**, **Dense** e **TensorBoard**. O primeiro módulo serve para criar o sistema de rede neural sequencial. O LSTM serve para contruir a nossa rede neural e detectar as ações que fazemos e junto com o LSTM, o módulo Dense é mais uma camada a ser colocada na rede neural. Por fim, o TensorBoard serve para fazer o registro para monitorar e rastrear o nosso modelo ao longo do treinamento. O passo seguinte é criar um diretório para armazenar esses registros.
 
 Com tudo feito, vamos finalmente criar a nossa rede neural!
+
+Usamos o módulo **Sequential** para fazer uma sequência de neurônios em nossa IA. Colocamos 3 **LSTM** dentro dela. Um ponto importante é passar o valor *True* para o parâmetro *return_sequences*. Sempre que estiver usando o LSTM com o TensorFlow e a camada seguinte precisar das informações da camada anterior, deve-se passar *True* para esse parâmetro. Na última camada de LSTM deve-se informar *False* para esse parâmetro. E para o parâmetro *input_shape* devemos passar uma tupla com o número de vídeos (30) e o número de pontos-chaves (1662) e esse último parâmetro só vale para o primeiro LSTM.
+
+Para a **Dense**, mudaremos a última camada com o parâmetro *actions.shape[0]*, que o valor é 3. Isso significa que teremos somente 3 saídas, que são os 3 sinais que usamos (olá, obrigado e amo você). Usando o *activation* como *softmax*, será retornado para nós a probabilidade do sinal que a câmera está capturando. Por exemplo, se for retornado esses valores: 0.7, 0.2, 0.1 a rede neural verá qual o maior valor (0.7) e em qual posição ele está (0). Com essa última informação, a IA vai até a lista das ações e vê qual é o item na posição recebida, e dessa forma será mostrado qual é a ação (olá).
+
+Vamos agora compilar o modelo.
