@@ -113,4 +113,10 @@ Vamos agora compilar o modelo e treiná-lo. Chamamos o método **fit()** e passa
 
 ### Etapa 8: Fazer Predições
 
-Para fazer uma predição manual e conferir se a IA aprendeu, basta chamar o módulo **predicit()** e informar como parâmetro a variável **X_teste**.
+Para fazer uma predição manual e conferir se a IA aprendeu, basta chamar o módulo **predicit()** e informar como parâmetro a variável **X_teste**. Caso fique muito discrepante o retorno da IA com a prova real, refaça a etapa de treino (a partir do **compile()**) e verifique o retorno com a prova real. Com isso, terminamos a Etapa 8.
+
+### Etapa 9: Salvar o Modelo
+
+Essa é a menor etapa de todo o projeto. Para salvar, basta usar o módulo **save()** com o parâmetro sendo o nome do arquivo. Se quiser carregar o modelo dentro do código, basta dar um **del nome do modelo** e correr a célula onde o modelo foi criado, depois onde está sendo compilado e por fim carregar o modelo com o método **load_weights()** com o nome do modelo salvo como parâmetro. Fim da Etapa 9
+
+### Etapa 10: Avaliar Usando a Matriz de Confusão e Acurácia
