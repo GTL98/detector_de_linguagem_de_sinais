@@ -4,7 +4,7 @@
 
 ***Todo o código estará no repositório.***
 
- ### Objetivo: Detectar em tempo real a linguagem de sinais.
+ ### Objetivo: Detectar em tempo real os sinais e traduzir para expressões em palavras.
   
     1 - Usar pontos-chaves MP (mediapipe) holísticos para a rede neural ser
     capaz de reconhecer as mãos e o rosto;
