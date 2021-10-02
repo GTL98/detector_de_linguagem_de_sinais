@@ -127,3 +127,6 @@ A Etapa 10 está concluída. Não é uma etapa que interfere diretamente na IA, 
 
 ### Etapa 11: Testar em tempo real
 
+O primeiro passo a se fazer nessa última etapa é trazer o primeiro loop com a câmera que fizemos (o mesmo da Etapa 2), mas com algumas atualizações para que possamos fazer o reconhecimento dos sinais em tempo real. A primeira variável pegará os 30 frames e colocará em sequência para que seja possível realizar as previsões. A segunda variável concatenará as detecções feitas para fazer as previsões. E a última variável é um limite para que seja informado a previsão se estiver acima do limite informado, uma margem de confiança. Agora vamos implementar nossa lógica de previsão.
+
+Vamos começar extraindo os pontos-chaves com a função **extrair_pontos_chaves()** (fizemos na Etapa 3) e adicionar esses dados a nossa variável **sequencias** e pegar os últimos 30 frames para fazer a previsão. Como no começo não teremos 30 frames, a previsão será feita somente depois de ter essa quantidade de frames.
