@@ -4,6 +4,8 @@
 
 ***Todo o código estará no repositório.***
 
+***O arquivo Detector (Lógica) contêm toda a lógica da construção da IA. O arquivo Detector (Pronto) possui somente o código para fazer a IA funcionar, com ela já treinada.***
+
  ### Objetivo: Detectar em tempo real os sinais e traduzir para expressões em palavras.
   
     1 - Usar pontos-chaves MP (mediapipe) holísticos para a rede neural ser
