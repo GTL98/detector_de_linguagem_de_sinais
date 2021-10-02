@@ -120,3 +120,10 @@ Para fazer uma predição manual e conferir se a IA aprendeu, basta chamar o mó
 Essa é a menor etapa de todo o projeto. Para salvar, basta usar o módulo **save()** com o parâmetro sendo o nome do arquivo. Se quiser carregar o modelo dentro do código, basta dar um **del nome do modelo** e correr a célula onde o modelo foi criado, depois onde está sendo compilado e por fim carregar o modelo com o método **load_weights()** com o nome do modelo salvo como parâmetro. Fim da Etapa 9
 
 ### Etapa 10: Avaliar Usando a Matriz de Confusão e Acurácia
+
+No começo dessa etapa, vamos importar do Scikit-Learn algumas métricas para avaliar o desepenho do nosso modelo. O método **multilabel_confusion_matrix()** é usado para ver cada um dos rótulos e ver os verdadeiros positivos e verdadeiro negativos; falsos positivos e falsos negativos. E o **accuracy_score()** para calcular a acurácia de nosso modelo. A maneira de ler a matriz de confusão é a seguinte: no canto superior esquerdo está o valor de **verdadeiros negativos**; no canto superior direito está o valor de **falsos positivos**; no canto inferiror esquerdo está o valor de **falsos negativos**; e no canto inferior direito está o valor de **verdadeiros positivos**. Feita a matriz de confusão, podemos chamar o médoto de calcular a acurácia. Para os dados de **teste**, a acurácia foi de 100% (um conjunto de dados pequeno é fácil de conseguir essa acurácia. Para os dados de **treino**, a acurácia foi de 98,8%. É bom que o valor da acurácia nos dados de teste sejam 100% par ter certeza de que nosso modelo está ótimo. O valor da acurácia nos dados de treino pode alterar dependendo do computador.
+
+A Etapa 10 está concluída. Não é uma etapa que interfere diretamente na IA, mas é importante fazê-la para saber como está o modelo, uma vez que a acurácia indica o quanto o nosso modelo está acertando o que lhe é passado.
+
+### Etapa 11: Testar em tempo real
+
