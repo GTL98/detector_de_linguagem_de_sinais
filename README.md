@@ -1,4 +1,4 @@
-# Rede Neural para detectar linguagem de sinais (achar um nome depois)
+# Rede Neural para detectar linguagem de sinais
 
 ***Usar o Jupyter Notebook para esse projeto.***
 
